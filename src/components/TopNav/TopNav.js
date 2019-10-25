@@ -43,7 +43,7 @@ class TopNav extends React.Component {
 
         return(<div>
             <Navbar color="light" light expand="md">
-              <NavbarBrand href="/">flying car dealership</NavbarBrand>
+              <NavbarBrand href="/">Kwame Bryan</NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
