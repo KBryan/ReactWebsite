@@ -1,10 +1,25 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## JSON Server
+You'll need to npm JSON Server. I also recommendend using postman to test your JSON Data. This is this script you'll need after everthing is installed.
+
+npm install -g json-server
+
+If you want to use my test data just NPM and run this command in your folder. React will run on Port 3000.
+
+json-server --port 3001 generate.js
+
+There is also a NodeJS API your can use on my GitHub account. Although, Don't have a tutorial to integrate MongoDB and Node yet. 
+
+## Had soome issues with npm start I recommend using react-scripts start
+ 
+ A little more typing but seems more stable IMHO. If there's a better way to do it always open to devs opions.
+ 
+ ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `react-scripts start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
