@@ -8,12 +8,18 @@ class Home extends React.Component {
         super(props);
     }
     render() {
+        if(this.props.vehicleData){
+
         return (
+
             <div>
-                <SiteCarousel/>
+                <SiteCarousel vehicleData= {this.props.vehicleData}/>
                 <VehicleBrowser />
             </div>
         );
+        } else {
+            return null;
+        }
     }
 }
 
