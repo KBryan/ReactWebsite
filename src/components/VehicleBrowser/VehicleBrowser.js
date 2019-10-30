@@ -1,5 +1,7 @@
 import React from 'react';
-import './VehicleBrowser.css'
+import './VehicleBrowser.css';
+import {Container,Row,Col, Card, CardImg, CardText, CardBody, CardTitle,CardSubtitle, NavLink} from 'reactstrap';
+import Numeral from 'numeral';
 
 class VehicleBrowser extends React.Component {
     constructor(props) {
@@ -7,7 +9,30 @@ class VehicleBrowser extends React.Component {
     }
 
     render() {
-        return (<h2>Vehicle Browser</h2>);
+        const VehicleSelections = this.props.vehicleData.map((item) => {
+            return <Col key={item.detailKey + "vb" } md={ Math.ceil (12 / this.props.vehicleData.length)}>
+                            <Card>
+                                <CardImg top width="100%" src={item.thumbnail} alt={item.alText} />
+                                <CardTitle>{item.year} {item.model} </CardTitle>
+                                <CardSubtitle>{item.tagline}</CardSubtitle>
+                                <CardText>Start at {Numeral (item.msrp).format('$0.0')}</CardText>
+                                <NavLink href={"/detail" + item.detailKey}>Detail</NavLink>
+                                <NavLink href="/build-and-price">Build and Price</NavLink>
+                                <NavLink href="/find-a-dealer">Dealers New You</NavLink>
+                            </Card>
+                        </Col>
+        });
+        return (
+
+            <div>
+                <Container>
+                    <Row>
+                        {VehicleSelections}
+                    </Row>
+
+                </Container>
+            </div>     
+            );
     }
 }
 

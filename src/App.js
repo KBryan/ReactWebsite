@@ -31,7 +31,7 @@ class App extends Component {
         <div className="contentArea">
     <Route exact path='/' render={(props) => <Home {...props} vehicleData={this.state.vehicleData} />} />
         </div>
-≈        <Footer />
+        <Footer />
       </div>
       </Router>
     );
