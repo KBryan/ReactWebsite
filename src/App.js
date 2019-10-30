@@ -3,6 +3,7 @@ import './App.css';
 import Axios from 'axios';
 import TopNav from './components/TopNav';
 import Home from './components/Home';
+import DealerLocator from './components/DealerLocator';
 import Footer from './components/Footer';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
@@ -29,7 +30,8 @@ class App extends Component {
       <div className="App">
         <TopNav vehicleData = {this.state.vehicleData} />
         <div className="contentArea">
-    <Route exact path='/' render={(props) => <Home {...props} vehicleData={this.state.vehicleData} />} />
+        <Route exact path='/' render={(props) => <Home {...props} vehicleData={this.state.vehicleData} />} />
+        <Route path='/find-a-dealer' component = {DealerLocator} />
         </div>
         <Footer />
       </div>

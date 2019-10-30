@@ -24,7 +24,7 @@ class VehicleBrowser extends React.Component {
         });
         return (
 
-            <div>
+            <div className="vehicleBrowser">
                 <Container>
                     <Row>
                         {VehicleSelections}
